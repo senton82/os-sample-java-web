@@ -1,2 +1,7 @@
+#!/bin/bash
 #execute default
+echo "Setting Dynatrace environment"
+/tmp/dynatrace/oneagent/dynatrace-agent64.sh
+
+echo "Executing default s2i exectuion"
 /usr/libexec/s2i/run
