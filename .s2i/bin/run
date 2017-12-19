@@ -4,7 +4,8 @@ echo "Setting Dynatrace environment"
 #export LD_PRELOAD="/tmp/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
 #/tmp/dynatrace/oneagent/dynatrace-env.sh
 
-source /tmp/dynatrace/oneagent/dynatrace-agent64.sh
+cd /tmp/dynatrace/oneagent
+source dynatrace-agent64.sh
 
 export
 
