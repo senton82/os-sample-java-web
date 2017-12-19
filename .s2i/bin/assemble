@@ -7,4 +7,4 @@ echo "Start Downloading Dynatrace PaaS Agent"
 wget -O /tmp/dynatrace-paas.sh "https://cnk88334.live.dynatrace.com/api/v1/deployment/installer/agent/unix/paas-sh/latest?include=java&include=process&bitness=64&arch=x86&Api-Token=wkrRKqDaQT6ZvWP9U8sMU"
 
 echo "Extracting Dynatrace PaaS Agent into /tmp"
-. /tmp/dynatrace-paas.sh /tmp
+exec /tmp/dynatrace-paas.sh /tmp
