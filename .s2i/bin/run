@@ -1,13 +1,12 @@
 #!/bin/bash
 #execute default
 echo "Setting Dynatrace environment"
-#export LD_PRELOAD="/tmp/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
-#/tmp/dynatrace/oneagent/dynatrace-env.sh
-
-cd /tmp/dynatrace/oneagent
-source dynatrace-agent64.sh
+export LD_PRELOAD="/tmp/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
+export DT_TENANT=cnk88334
+export DT_TENANTTOKEN=ebleBg4aSjFeKrib
+export DT_CONNECTION_POINT="https://sg-eu-west-1-54-77-244-216-prod-eu-west-4-ireland.live.ruxit.com/communication;https://sg-eu-west-1-52-17-182-176-prod-eu-west-4-ireland.live.ruxit.com/communication;https://sg-eu-west-1-54-77-242-73-prod-eu-west-4-ireland.live.ruxit.com/communication;https://sg-eu-west-1-52-16-207-70-prod-eu-west-4-ireland.live.ruxit.com/communication"
 
 export
 
 echo "Executing default s2i exectuion"
-/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+/usr/libexec/s2i/run
