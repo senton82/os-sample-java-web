@@ -1,8 +1,8 @@
 #!/bin/bash
 #execute default
 echo "Setting Dynatrace environment"
-/tmp/dynatrace/oneagent/dynatrace-agent64.sh
-
+export LD_PRELOAD="/tmp/dynatrace/oneagent/agent/lib64/liboneagentproc.so"
+/tmp/dynatrace/oneagent/dynatrace-env.sh
 export
 
 echo "Executing default s2i exectuion"
